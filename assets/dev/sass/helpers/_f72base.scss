@@ -1,0 +1,350 @@
+/*! =============================================================================
+   HTML5 display definitions
+   ========================================================================== */
+article,aside,details,figcaption,figure,footer,header,hgroup,nav,section,summary{display:block}
+audio,canvas,video{display:inline-block;*display:inline;*zoom:1}
+audio:not([controls]){display:none;height:0}
+[hidden]{display:none}
+
+
+/*! =============================================================================
+   BASE
+   ========================================================================== */
+/*
+ * 1. Correct text resizing oddly in IE6/7 when body font-size is set using em units
+ * 2. Force vertical scrollbar in non-IE
+ * 3. Prevent iOS text size adjust on device orientation change, without disabling user zoom: h5bp.com/g
+ */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+html { font-size: 100%; overflow-y: scroll; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; height: 100%; width: 100%; box-sizing: border-box; }
+html,button,input,select,textarea{ font-family:$baseFontFamily; }
+body { 
+	font-size: $baseFontSize; 
+	line-height: $baseLineHeight; 
+	color: $textColor;
+	margin: 0px !important; 
+	padding: 0px !important;
+	text-align: left;
+    height: 100%;
+}
+
+.center-div { float:none !important; margin-left: auto !important; margin-right: auto !important; }
+.center-page { margin-left: auto; margin-right: auto; max-width: $gridWidth; }
+.noflow { overflow: hidden; }
+.padder-sides {	padding-right: 3%; padding-left: 3%; }
+.padder-topbot { padding-top: 3%; padding-bottom: 3%; list-style-type: none; }
+.padder-bot { padding-top: 0; padding-bottom: 3%; list-style-type: none; }
+.padder-top { padding-top: 3%; padding-bottom: 0; list-style-type: none; }
+/* 
+ * Remove text-shadow in selection highlight: h5bp.com/i
+ * These selection declarations have to be separate
+ * Also: hot pink! (or customize the background color to match your design)
+ */
+::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
+::selection { background: #fe57a1; color: #fff; text-shadow: none; }
+
+
+/*! =============================================================================
+   FLOATS, ALIGN & CLEAR
+   ========================================================================== */
+
+.floatleft { float: left !important; }
+.floatright { float: right !important; }
+.alignleft { float: left; margin-top: .5em; margin-right: 1.25em; margin-bottom: .5em; }
+.alignright { float: right; margin-top: .5em; margin-bottom: .5em; margin-left: 1.25em; }
+.aligncenter { display: block; margin-left: auto !important; margin-right: auto !important; }
+.no-top { margin-top: 0px !important; }
+/* float clearing for IE6 */
+.no-border {  border:none !important; }
+/* float clearing for IE6 */
+* html .clearfix{ height: 1%; overflow: visible; }
+/* float clearing for IE7 */
+*+html .clearfix{ min-height: 1%; }
+/* float clearing for everyone else */
+.clearfix:after{ clear: both; content: "."; display: block; height: 0; visibility: hidden; font-size: 0; }
+.clr { clear: both; }
+
+.nopad { padding: 0px !important; }
+.nopad-right { padding-right: 0px !important; }
+.nopad-left { padding-left: 0px !important; }
+.nopad-top { padding-top: 0px !important; }
+.nopad-bottom { padding-bottom: 0px !important; }
+
+.nomarg { margin: 0px !important; }
+.nomarg-right { margin-right: 0px !important; }
+.nomarg-left { margin-left: 0px !important; }
+.nomarg-top { margin-top: 0px !important; }
+.nomarg-bottom { margin-bottom: 0px !important; }
+
+/*! =============================================================================
+   IMAGES
+   ========================================================================== */
+img{border:0;-ms-interpolation-mode:bicubic}
+svg:not(:root){overflow:hidden}
+
+img.alignleft {
+	margin: 25px 25px 25px 0;
+}
+img.alignright {
+	margin: 25px 0 25px 24px;
+}
+img.aligncenter {
+	margin-top: 25px;
+	margin-bottom: 25px;
+}
+
+.img-rounded {
+  border-radius: 6px;
+}
+.img-polaroid {
+  padding: 4px;
+  background-color: $white;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+img.photoborder { border: 6px solid #FFF; }
+img.photoborder:hover { border: 6px solid #c2ab71; }
+.img-circle {
+  border-radius: 500px;
+}
+img.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*! =============================================================================
+   LISTS
+   ========================================================================== */
+
+ul, ol { padding-left: 0em; /* IE has a 40px margin-left instead */ margin-top: 1em; margin-right: 0; margin-bottom: 1em; margin-left: 0; }
+
+
+li { margin-left: 0em; padding-top: 0.5ex; padding-bottom: 0.5ex; }
+dd { margin-top: 0; margin-right: 0; margin-bottom: 0; margin-left: 0.0416666666666667px; }
+nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
+
+dl,menu,ol,ul{margin:1em 0}
+dd{margin:0 0 0 30px}
+menu,ol,ul{padding:0 0 0 30px}
+
+
+/*! =============================================================================
+   EMBEDED CONTENT
+   ========================================================================== */
+/*
+ * 1. Improve image quality when scaled in IE7: h5bp.com/d
+ * 2. Remove the gap between images and borders on image containers: h5bp.com/e 
+ */
+/* Responsive images */
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 100%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"],
+img[class*="attachment-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+img.size-full,
+img.size-large,
+img.header-image,
+img.wp-post-image {
+	max-width: 100%;
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
+
+img, embed, object,
+video { border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; max-width: 100%; height: auto; }
+
+html.ie6 img, html.ie6 embed, html.ie6 object,
+html.ie6 video { width: 100%; }
+
+/* Make sure videos and embeds fit their containers */
+embed,
+iframe,
+object,
+video {
+	max-width: 100%;
+}
+.entry-content .twitter-tweet-rendered {
+	max-width: 100% !important; /* Override the Twitter embed fixed width */
+}
+
+/*	Responsive Video Container  */
+.video-container {position: relative;padding-bottom: 56.25%;padding-top: 30px;height: 0;overflow: hidden;}
+.video-container iframe, .video-container object, .video-container embed {position: absolute;top: 0;left: 0;width: 100%;height: 100%;}
+
+/*
+ * Correct overflow not hidden in IE9 
+ */
+
+svg:not(:root) { overflow: hidden; }
+
+
+/*! =============================================================================
+   FIGURES
+   ========================================================================== */
+
+figure {  margin: 1em 0; }/* Default in HTML5 spec: `1em 40px` */
+button, input, select, textarea { color: $grayDark; }
+
+/*! =============================================================================
+   TABLES
+   ========================================================================== */
+table{border-collapse:collapse;border-spacing:0}
+.table { display: table;   /* Allow the centering to work */
+        margin: 0 auto;
+}
+td, th { padding: 1px; /* Same as browser default - set to "0" to remove padding */ /*vertical-align: top;  Default is "middle" */ text-align: left; /* Default for TH elements is "center" */}
+td:first-child, th:first-child { empty-cells: hide; /* Hide empty cells when they're the first in the row */}
+
+table    { display: table }
+tr       { display: table-row }
+thead    { display: table-header-group }
+tbody    { display: table-row-group }
+tfoot    { display: table-footer-group }
+col      { display: table-column }
+colgroup { display: table-column-group }
+td, th   { display: table-cell }
+caption  { display: table-caption }
+
+@media only screen and (max-width: 650px) {
+	
+	/* Force table to not be like tables anymore */
+	.no-more-tables table, 
+	.no-more-tables thead, 
+	.no-more-tables tbody, 
+	.no-more-tables th, 
+	.no-more-tables td, 
+	.no-more-tables tr { 
+		display: block; 
+	}
+ 
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.no-more-tables thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+ 
+	.no-more-tables tr { border: 1px solid #ccc; }
+ 
+	.no-more-tables td { 
+		/* Behave  like a "row" */
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50% !important; 
+		white-space: normal;
+		text-align:left !important;
+	}
+ 
+	.no-more-tables td:before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		text-align:left;
+		font-weight: bold;
+	}
+ 
+	/*
+	Label the data
+	*/
+	.no-more-tables td:before { content: attr(data-title); }
+}
+
+/*! =============================================================================
+   RESPONSIVE HIDERS
+   ========================================================================== */
+.no-desk {
+	display:none !important;
+	@include bp-phone {
+		display: block !important;
+	}
+	@include bp-tablet {
+		display: block !important;
+	}	
+}
+.no-tablet {
+	display:block;
+	@include bp-phone {
+		display: block;
+	}
+	@include bp-tablet {
+		display: none;
+	}	
+}
+.no-phone {
+	display:block;
+	@include bp-phone {
+		display: none;
+	}
+	@include bp-tablet {
+		display: block;
+	}	
+}
+.no-phone-tablet {
+	display:block !important;
+	@include bp-phone {
+		display: none !important;
+	}
+	@include bp-tablet {
+		display: none !important;
+	}	
+}
+.no-nav {
+
+	@include bp-nav {
+		display: none !important;
+	}	
+}
+
+
+/*! =============================================================================
+   MULTIPLE COLUMNS
+   ========================================================================== */
+.two-col-text {
+column-count: 2;
+column-gap: $gridGutterWidth;
+@include bp-phone {
+column-count: 1;
+column-gap: 0;
+  }
+  @include bp-tablet {
+column-count: 1;
+column-gap: 0;
+  }
+}
+.three-col-text {
+column-count: 3;
+column-gap: $gridGutterWidth;
+@include bp-phone {
+column-count: 1;
+column-gap: 0;
+  }
+  @include bp-tablet {
+column-count: 1;
+column-gap: 0;
+  }
+}
+.four-col-text {
+column-count: 4;
+column-gap: $gridGutterWidth;
+@include bp-phone {
+column-count: 1;
+column-gap: 0;
+  }
+  @include bp-tablet {
+column-count: 1;
+column-gap: 0;
+  }
+}

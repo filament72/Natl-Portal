@@ -1,0 +1,88 @@
+/*! =============================================================================
+   TYPOGRAPHY
+   ========================================================================== */
+abbr[title]{border-bottom:1px dotted}
+b,strong{font-weight:bold}
+blockquote{margin:1em 40px}
+dfn { font-style: italic; }
+hr {
+	height:1px;
+	background-color: $black;
+	border: 0;
+	margin: 1em 0;
+	padding: 0;
+}
+
+ins { background: #ff9; color: #000; text-decoration: none; }
+mark { background: #ff0; color: #000; font-style: italic; font-weight: bold; }
+/* Redeclare monospace font family: h5bp.com/j */
+pre, code, kbd, samp { font-family: monospace, monospace; _font-family: 'courier new', monospace; font-size: 1em; }
+/* Improve readability of pre-formatted text in all browsers */
+pre { white-space: pre; white-space: pre-wrap; word-wrap: break-word; }
+q:before, q:after { content: ""; content: none; }
+small { font-size: 75%; }
+.reallysmall { font-size: 60%; }
+/* Position subscript and superscript content without affecting line-height: h5bp.com/k */
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline; }
+sup { top: -0.5em; }
+sub { bottom: -0.25em; }
+
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+.text-center { text-align: center; }
+.text-justify { text-align: justify; }
+
+h1, h2, h3, h4 { font-weight: bold; margin: 0px; padding: 0px; line-height: 100%; }
+h1{font-size:3em;margin:1em 0}
+h2{font-size:2em;margin:1em 0}
+h3{font-size:1.75em;margin:1em 0}
+h4{font-size:1.5em;margin:1em 0 .25em}
+h5{font-size:1em;margin:1em 0}
+h6{font-size:.75em;margin:1em 0}
+
+
+
+p { margin: 0; }
+ul { margin-top: 0; margin-bottom: 0; }
+p + p { margin-top: 1.5em; }
+p + ul { margin-top: 1.5em; }
+ul + p { margin-top: 1.5em; }
+
+.entry-summary ul + p { margin-top: 0px; }
+
+p.spacer { margin-bottom: 2em; margin-top: 2em; }
+em { font-style:italic }
+q, cite { font-style: italic; quotes: none; } /* Make quotations and references more visible */
+
+.notext { font-size: 0; line-height: 0; text-indent: -999999px; }/* Offsets text out of sight */
+
+.lead {
+  margin-bottom: 1.25em;
+  font-size: 2em;
+  font-weight: 200;
+  line-height: 2em;
+}
+small {  font-size: 85%; }
+.large {  font-size: 125%; }
+.x-large {  font-size: 150%; }
+strong {  font-weight: bold; }
+em {  font-style: italic; }
+
+.muted { color: #999999; }
+a.muted:hover,
+a.muted:focus {
+  color: #808080;
+}
+.page-title-wrap h1 {
+    padding: 0;
+    margin: 0 0 .8em 0;
+    font-size: 1.875em;
+    line-height: 100%;
+}
+
+#breadcrumbs .breadcrumb_last, #breadcrumbs a {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 100%;
+    text-transform: uppercase;
+}

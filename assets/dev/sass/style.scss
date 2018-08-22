@@ -1,0 +1,27 @@
+/**
+ * Merge all stylesheets into one
+
+ * 1. Sass helpers
+ * 2. Vendor related stylesheets
+ * 3. Site Sheets
+ */
+
+
+
+/* 1 */
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/f72base";
+@import "helpers/grid";
+
+/* 2 */
+@import url("https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i");
+
+/* 3 */
+@import "typography";
+@import "links";
+@import "forms";
+@import "buttons";
+@import "layout";
+@import "navigation";
